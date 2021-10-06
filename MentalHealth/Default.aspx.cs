@@ -11,7 +11,10 @@ namespace MentalHealth
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            void factsButton(object Mysender, EventArgs eT)
+            { 
+                Console.WriteLine("working***********************");
+            }
         }
     }
 }
