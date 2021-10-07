@@ -7,10 +7,9 @@ using System.Web.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using System.Web.UI.WebControls;
-
-namespace MentalHealth
+namespace MentalHealth.Controllers
 {
-    public class Controller : ApiController
+    public class MyController : ApiController
     {
         public class Fact
         {
@@ -42,10 +41,10 @@ namespace MentalHealth
             }
             return fact;
         }
-        static void Main(object sender, EventArgs e)
+        static void Main()
         {
             Console.WriteLine("working***********************");
-                RunAsync().GetAwaiter().GetResult(); 
+                
         }
 
         static async Task RunAsync()

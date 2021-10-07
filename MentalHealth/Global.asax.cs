@@ -13,14 +13,25 @@ namespace MentalHealth
     {
         void Application_Start(object sender, EventArgs e)
         {
+            GlobalConfiguration.Configure(WebApiConfig.Register);
+            BundleConfig.RegisterBundles(BundleTable.Bundles);
             // Code that runs on application startup
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-            RouteTable.Routes.MapHttpRoute(
-    name: "MentalHealthApi",
-    routeTemplate: "api/{controller}/{id}",
-    defaults: new { id =RouteParameter.Optional }
-);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+        }
+        public static class WebApiConfig
+        {
+            public static void Register(HttpConfiguration config)
+            {
+                // Web API routes
+                config.MapHttpAttributeRoutes();
+
+                config.Routes.MapHttpRoute(
+                    name: "DefaultApi",
+                    routeTemplate: "api/{controller}/{id}",
+                    defaults: new { id = RouteParameter.Optional }
+                );
+            }
         }
     }
 }
