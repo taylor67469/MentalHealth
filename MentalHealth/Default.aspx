@@ -28,10 +28,11 @@
                                 function getRandomInt(max) {
                                     return Math.floor(Math.random() * max);
                                 }
-                                var mySize1 = data.Result.Resources.Resource.length - 2;
-                                var mySize2 = data.Result.Resources.Resource[getRandomInt(mySize1)].Sections.section.length;
-                                $("#randoText").html(data.Result.Resources.Resource[getRandomInt(mySize1)].Sections.section[getRandomInt(mySize2)].Content);
-                                $("#randoTitle").append(data.Result.Resources.Resource[getRandomInt(mySize1)].Title);
+                                var mySize1 = data.Result.Resources.Resource.length-1;
+                                var mySize2 = data.Result.Resources.Resource[getRandomInt(mySize1)].Sections.section.length-1;
+                                var mySize3 = getRandomInt(mySize1);
+                                $("#randoText").html(data.Result.Resources.Resource[mySize3].Sections.section[getRandomInt(mySize2)].Content);
+                                //$("#randoTitle").append(data.Result.Resources.Resource[getRandomInt(mySize3)].Title);
                             })
                         event.preventDefault();
                     }
