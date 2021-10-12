@@ -10,12 +10,38 @@
     <div class="row">
         <div class="col-md-12">
             <h2>Mental Health Facts</h2>
-            <p><asp:Panel runat="server" id="randomFact"></asp:Panel></p>
+            <strong><h3 id="randoTitle"></h3></strong>
+            <span id="randoText"></span>
             <a href="https://health.gov/myhealthfinder" title="MyHealthfinder">
 <img src="https://health.gov/themes/custom/healthfinder/images/MyHF.svg" alt="MyHealthfinder"/>
 </a>
-                <asp:Button runat="server" Text="New fact" id="testB"/>
-            
+                <button id="factBtn">New fact</button>
+            <script>
+                $(document).ready(function () { 
+                    $("#factBtn").on('click',btnClick);
+                    function btnClick(event) {
+                        $("#randoTitle").text("");
+                        $("#randoText").text("");
+                        $.get(
+                           "https://health.gov/myhealthfinder/api/v3/topicsearch.json?categoryId=20")
+                            .then(function (data) {
+                                function getRandomInt(max) {
+                                    return Math.floor(Math.random() * max);
+                                }
+                                var mySize1 = data.Result.Resources.Resource.length - 2;
+                                var mySize2 = data.Result.Resources.Resource[getRandomInt(mySize1)].Sections.section.length;
+                                $("#randoText").html(data.Result.Resources.Resource[getRandomInt(mySize1)].Sections.section[getRandomInt(mySize2)].Content);
+                                $("#randoTitle").append(data.Result.Resources.Resource[getRandomInt(mySize1)].Title);
+                            })
+                        event.preventDefault();
+                    }
+                    
+                })
+                    
+                    
+  
+            </script>
+
         </div>
     </div>
 

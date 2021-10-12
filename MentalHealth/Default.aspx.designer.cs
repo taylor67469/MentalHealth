@@ -11,23 +11,5 @@ namespace MentalHealth {
     
     
     public partial class _Default {
-        
-        /// <summary>
-        /// randomFact control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel randomFact;
-        
-        /// <summary>
-        /// testB control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button testB;
     }
 }
