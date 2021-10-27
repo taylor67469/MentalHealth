@@ -32,7 +32,6 @@
                                 var mySize2 = data.Result.Resources.Resource[getRandomInt(mySize1)].Sections.section.length-1;
                                 var mySize3 = getRandomInt(mySize1);
                                 $("#randoText").html(data.Result.Resources.Resource[mySize3].Sections.section[getRandomInt(mySize2)].Content);
-                                //$("#randoTitle").append(data.Result.Resources.Resource[getRandomInt(mySize3)].Title);
                             })
                         event.preventDefault();
                     }
