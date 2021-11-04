@@ -10,7 +10,6 @@
     <div class="row">
         <div class="col-md-12">
             <h2>Mental Health Facts</h2>
-            <strong><h3 id="randoTitle"></h3></strong>
             <span id="randoText"></span>
             <a href="https://health.gov/myhealthfinder" title="MyHealthfinder">
 <img src="https://health.gov/themes/custom/healthfinder/images/MyHF.svg" alt="MyHealthfinder"/>

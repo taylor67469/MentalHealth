@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <packageSources>
+    <clear />
+    <add key="MentalHealth" value="https://pkgs.dev.azure.com/taylor67469/dd5a2bae-330a-4e9f-bccc-446531b1634e/_packaging/MentalHealth/nuget/v3/index.json" />
+  </packageSources>
+</configuration>
