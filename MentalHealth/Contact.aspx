@@ -2,7 +2,7 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h2><%: Title %>.</h2>
-    <h3>Your contact page.</h3>
+    <h3>Zachary Taylor's contact page.</h3>
     <address>
         Hoffman Estates, IL 60169<br />
         <abbr title="Phone">Phone Number:</abbr>

@@ -377,9 +377,6 @@ Copyright (C) Microsoft Corporation. All rights reserved.
   <PropertyGroup>
     <AspNetTargetsPath Condition=" '$(AspNetTargetsPath)'=='' ">$(MSBuildThisFileDirectory)..\Web\</AspNetTargetsPath>
   </PropertyGroup>
-
-  <Import Project="$(AspNetTargetsPath)Microsoft.Web.Publishing.targets" Condition="Exists('$(AspNetTargetsPath)Microsoft.Web.Publishing.targets')" />
-
   <!--Ensure the Siliverlight zap file is created and copied to the bin folder for the Microsoft.Web.Publishing.targets-->
   <PropertyGroup>
     <OnBeforePipelineCollectFilesPhase>
