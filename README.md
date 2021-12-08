@@ -1,5 +1,7 @@
 # Mental Health
 
+## Deployed Link
+http://mentalhealthfacts.azurewebsites.net/
 ## Screenshot
 ![Mental Health Project](MentalHealth/Screenshot/mentalHealthSS.png)
 ## Description
